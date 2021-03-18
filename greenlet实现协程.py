@@ -9,12 +9,8 @@ g.switch("123")  # 相当于send函数，用于切换协程，参数可以只写
 
 def c(n):
     while True:
-        try:
-            n = g1.switch()
-            print("c---->{}".format(n))
-        finally:
-            print("结束")
-
+        n = g1.switch()
+        print("c---->{}".format(n))
 
 
 def p():
